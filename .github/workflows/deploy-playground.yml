@@ -1,55 +1,41 @@
-name: Deploy playground to GitHub Pages
+name: Deploy Playground to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual trigger from Actions tab
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  contents: write  # Required to push to gh-pages branch
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: playground
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20'  # Use a recent LTS version
           cache: 'npm'
           cache-dependency-path: playground/package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        working-directory: ./playground
+        run: npm ci  # or yarn install --frozen-lockfile if using yarn
 
       - name: Build playground
-        run: npm run build
+        working-directory: ./playground
+        run: npm run build  # Adjust if your build script is different (e.g., yarn build)
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: playground/dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./playground/build  # Path to the built files
+          publish_branch: gh-pages
+          force_orphan: true  # Optional: clean history on each deploy
