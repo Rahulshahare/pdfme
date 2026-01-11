@@ -5,10 +5,6 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/pdfme/',
-  build: { 
-    target: 'esnext',
-    sourcemap: true // Enable source maps for production builds
-  },
   plugins: [react()/*, sentryVitePlugin({
     org: "hand-dot",
     project: "playground-pdfme"

@@ -96,9 +96,9 @@ export default function Navigation() {
   const [helpModalOpen, setHelpModalOpen] = useState(false);
 
   const navLinks = [
-    { id: 'templates-nav', to: '/templates', label: 'Templates' },
-    { id: 'designer-nav', to: '/designer', label: 'Designer' },
-    { id: 'form-viewer-nav', to: '/form-viewer', label: 'Form/Viewer' },
+    { id: 'templates-nav', to: 'pdfme/templates', label: 'Templates' },
+    { id: 'designer-nav', to: 'pdfme/designer', label: 'Designer' },
+    { id: 'form-viewer-nav', to: 'pdfme/form-viewer', label: 'Form/Viewer' },
   ];
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>

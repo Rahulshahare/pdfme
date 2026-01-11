@@ -14,9 +14,10 @@ export default function App() {
       {!isEmbedded && <Header />}
       <Routes>
         <Route path={"/"} element={<Designer />} />
-        <Route path={"/designer"} element={<Designer />} />
-        <Route path="/form-viewer" element={<FormAndViewer />} />
-        <Route path="/templates" element={<Templates isEmbedded={isEmbedded} />} />
+        <Route path={"/pdfme"} element={<Designer />} />
+        <Route path={"pdfme/designer"} element={<Designer />} />
+        <Route path="/pdfme/form-viewer" element={<FormAndViewer />} />
+        <Route path="/pdfme/templates" element={<Templates isEmbedded={isEmbedded} />} />
       </Routes>
       <ToastContainer />
     </div>
