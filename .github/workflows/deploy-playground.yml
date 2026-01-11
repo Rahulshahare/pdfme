@@ -20,22 +20,27 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Use a recent LTS version
+          node-version: '20'
           cache: 'npm'
-          cache-dependency-path: playground/package-lock.json
 
       - name: Install dependencies
+        run: npm install
+
+      - name: Build packages
+        run: npm run build
+
+      - name: Install playground dependencies
         working-directory: ./playground
-        run: npm ci  # or yarn install --frozen-lockfile if using yarn
+        run: npm install
 
       - name: Build playground
         working-directory: ./playground
-        run: npm run build  # Adjust if your build script is different (e.g., yarn build)
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./playground/build  # Path to the built files
+          publish_dir: ./playground/dist
           publish_branch: gh-pages
-          force_orphan: true  # Optional: clean history on each deploy
+          force_orphan: true
