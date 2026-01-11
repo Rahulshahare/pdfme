@@ -10,6 +10,8 @@ export function fromKebabCase(str: string): string {
     .join(' ');
 }
 
+  
+
 export const getFontsData = (): Font => ({
   ...getDefaultFont(),
   'PinyonScript-Regular': {
@@ -23,6 +25,14 @@ export const getFontsData = (): Font => ({
   NotoSansJP: {
     fallback: false,
     data: 'https://fonts.gstatic.com/s/notosansjp/v53/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75vY0rw-oME.ttf',
+  },
+  'Tiro Devanagari Marathi': {
+    fallback: false,
+    data: 'https://raw.githubusercontent.com/TiroTypeworks/Indigo/main/fonts/TiroDevaMarathi/TTF/TiroDevaMarathi-Regular.ttf',
+  },
+  'Noto Sans Devanagari': {
+    fallback: false,
+    data: 'https://raw.githubusercontent.com/openmaptiles/fonts/master/noto-sans/NotoSansDevanagari-Regular.ttf',
   }
 });
 
