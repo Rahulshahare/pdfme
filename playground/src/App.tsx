@@ -16,9 +16,9 @@ export default function App() {
       <Routes>
         <Route path={"/"} element={<Designer />} />
         <Route path={"/pdfme"} element={<Designer />} />
-        <Route path={"pdfme/designer"} element={<Designer />} />
-        <Route path="/pdfme/form-viewer" element={<FormAndViewer />} />
-        <Route path="/pdfme/templates" element={<Templates isEmbedded={isEmbedded} />} />
+        <Route path={"/designer"} element={<Designer />} />
+        <Route path="/form-viewer" element={<FormAndViewer />} />
+        <Route path="/templates" element={<Templates isEmbedded={isEmbedded} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />

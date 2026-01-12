@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/pdfme/',
+  // base: '/pdfme/',
   plugins: [react()/*, sentryVitePlugin({
     org: "hand-dot",
     project: "playground-pdfme"
