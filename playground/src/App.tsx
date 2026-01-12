@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import Designer from "./routes/Designer";
 import FormAndViewer from "./routes/FormAndViewer";
 import Templates from "./routes/Templates";
+import NotFound from "./routes/NotFound";
 import Header from "./components/Header";
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route path={"pdfme/designer"} element={<Designer />} />
         <Route path="/pdfme/form-viewer" element={<FormAndViewer />} />
         <Route path="/pdfme/templates" element={<Templates isEmbedded={isEmbedded} />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />
     </div>
