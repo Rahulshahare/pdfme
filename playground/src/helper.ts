@@ -18,14 +18,14 @@ export const getFontsData = (): Font => ({
     fallback: false,
     data: 'https://fonts.gstatic.com/s/pinyonscript/v22/6xKpdSJbL9-e9LuoeQiDRQR8aOLQO4bhiDY.ttf',
   },
-  NotoSerifJP: {
-    fallback: false,
-    data: 'https://fonts.gstatic.com/s/notoserifjp/v30/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bwxOubAILO5wBCU.ttf',
-  },
-  NotoSansJP: {
-    fallback: false,
-    data: 'https://fonts.gstatic.com/s/notosansjp/v53/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75vY0rw-oME.ttf',
-  },
+  // NotoSerifJP: {
+  //   fallback: false,
+  //   data: 'https://fonts.gstatic.com/s/notoserifjp/v30/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bwxOubAILO5wBCU.ttf',
+  // },
+  // NotoSansJP: {
+  //   fallback: false,
+  //   data: 'https://fonts.gstatic.com/s/notosansjp/v53/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75vY0rw-oME.ttf',
+  // },
   'Tiro Devanagari Marathi': {
     fallback: false,
     data: 'https://raw.githubusercontent.com/TiroTypeworks/Indigo/main/fonts/TiroDevaMarathi/TTF/TiroDevaMarathi-Regular.ttf',
