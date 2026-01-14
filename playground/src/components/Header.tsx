@@ -98,6 +98,7 @@ export default function Navigation() {
   const navLinks = [
     { id: 'templates-nav', to: '/templates', label: 'Templates' },
     { id: 'designer-nav', to: '/designer', label: 'Designer' },
+    // { id: 'form-viewer-nav', to: '/form-viewer', label: 'Form/Viewer' },
   ];
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
