@@ -112,8 +112,8 @@ export default function Navigation() {
   return (
     <div className="border-b border-gray-200 my-1 overflow-x-auto">
       <nav aria-label="Tabs" className="-mb-px flex items-center space-x-3 px-4">
-        <span className="text-xs text-gray-500 select-none">
-          Version: {PDFME_VERSION}
+        <span className="text-2xl font-bold text-orange-500">
+          <NavLink to="/" >PDF-मी</NavLink>
         </span>
 
         {navLinks.map((item) => (

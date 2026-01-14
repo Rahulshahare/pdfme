@@ -5,6 +5,7 @@ import FormAndViewer from "./routes/FormAndViewer";
 import Templates from "./routes/Templates";
 import NotFound from "./routes/NotFound";
 import Header from "./components/Header";
+import LandingPage from "./routes/LandingPage";
 
 export default function App() {
   const [searchParams] = useSearchParams();
@@ -14,8 +15,7 @@ export default function App() {
     <div className="min-h-screen flex flex-col">
       {!isEmbedded && <Header />}
       <Routes>
-        <Route path={"/"} element={<Designer />} />
-        <Route path={"/pdfme"} element={<Designer />} />
+        <Route path={"/"} element={<LandingPage />} />
         <Route path={"/designer"} element={<Designer />} />
         <Route path="/form-viewer" element={<FormAndViewer />} />
         <Route path="/templates" element={<Templates isEmbedded={isEmbedded} />} />
