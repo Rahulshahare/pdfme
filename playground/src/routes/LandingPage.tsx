@@ -1,6 +1,6 @@
 // src/components/LandingPage.tsx
 import React, { useEffect, useState } from 'react';
-import { Sun, Moon, Type, Image, Calendar, Table, Globe } from 'lucide-react';
+import { Sun, Moon, Type, Image, Calendar, Table, Globe, Github, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 
@@ -120,6 +120,66 @@ const LandingPage: React.FC = () => {
               description="No install, no server uploads, privacy-first — works offline after load."
             />
           </div>
+        </div>
+      </section>
+
+      {/** Appreciation Section */}
+      <section className="py-20 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 text-center">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-10 text-primary">
+            Thank You, pdfme Team ❤️
+          </h2>
+
+        <div className="prose prose-lg dark:prose-invert mx-auto text-slate-700 dark:text-slate-300 max-w-none">
+          <p className="mb-8">
+            First and foremost — a big shoutout and huge thanks to the original{' '}
+            <strong>pdfme</strong> developers.
+          </p>
+        </div>
+
+        
+
+        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://github.com/pdfme/pdfme"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 text-lg font-medium rounded-xl bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 transition"
+          >
+            <Github className="h-5 w-5 mr-2" />
+            PDFME On GitHub
+          </a>
+
+          {/* Optional: Add your own fork link if you want */}
+          {/* <a
+            href="https://github.com/rahulshahare/pdfme"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 text-lg font-medium rounded-xl border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+          >
+            <Globe className="h-5 w-5 mr-2" />
+            My Fork (PDF-मी)
+          </a>  */}
+        </div>
+
+        <div className="mt-16 pt-12 border-t border-slate-200 dark:border-slate-700">
+          <h3 className="text-3xl font-bold text-primary mb-6">
+            Want Support for More Languages?
+          </h3>
+
+          <a
+            href="https://twitter.com/rahulshahare"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mb-8 inline-flex items-center px-6 py-3 text-lg font-medium rounded-xl bg-blue-100 dark:bg-blue-900/30 hover:bg-blue-200 dark:hover:bg-blue-800/50 transition text-blue-700 dark:text-blue-300"
+          >
+            <MessageCircle className="h-5 w-5 mr-2" />
+            Contact me @rahulshahare
+          </a>
+
+        </div>
+
+        
         </div>
       </section>
 
