@@ -226,7 +226,7 @@ const LandingPage: React.FC = () => {
             Launch PDF-मी Editor Now →
           </Link>
           <p className="mt-8 text-lg opacity-90">
-            Made with ❤️ in Bharat • Open Source • By Oceangreen Technologies
+            Made with ❤️ • <a href="https://github.com/rahulshahare/pdfme" target="_blank" className="text-white hover:underline">Open Source</a> •  <a href="https://twitter.com/rahulshahare" target="_blank" className="text-white hover:underline">By Rahul Shahare</a>
           </p>
         </div>
       </footer>
